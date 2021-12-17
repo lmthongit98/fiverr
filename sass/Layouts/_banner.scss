@@ -1,0 +1,22 @@
+.banner{
+    border-radius: $border-radius-1;
+    padding: 125px 0;
+    padding-left: 96px;
+    margin: 0 $mg-3 - 2;
+    margin-bottom: $mg-5;
+    background-image: url('../img/bg-signup-1400-x1.png');
+    h2{
+        max-width: 670px;
+        @include styleText($color-white-0, $fs-1, $fw-2);
+        i{
+            font-weight: $fw-0;
+        }
+        margin: 0;
+        margin-bottom: $mg-3;
+    }
+    .button--green{
+        border-radius: $border-radius-1;
+        padding: $pd-0 $pd-5;
+        font-size: $fs-0;
+    }
+}

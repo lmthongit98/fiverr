@@ -1,0 +1,38 @@
+.button--green{
+    transition: all .3s;
+    &:focus{
+        outline: none;
+    }
+    @include styleButton($color-white-0, $color-green-0, $color-green-0,
+     $fs-0 - 1, $fw-2, $pd-2, $pd-1);
+     border-radius: 0 $border-radius-1 $border-radius-1 0;
+    &:hover{
+        @include hoverButton($color-white-0, $color-green-1, $color-green-1);
+    }
+}
+
+.button--outline{
+    transition: all .3s;
+    &:focus{
+        outline: none;
+    }
+    @include styleButton($color-white-0, transparent, $color-white-0,
+     $fs-0 - 1, $fw-2, $pd-4, $pd-1);
+     border-radius: $border-radius-2;
+    &:hover{
+        @include hoverButton($color-black-0, $color-white-0, $color-white-0);
+    }
+}
+
+.button--white{
+    transition: all .3s;
+    &:focus{
+        outline: none;
+    }
+    @include styleButton($color-blue-2, $color-white-0, $color-white-0,
+     $fs-0 + 2, $fw-2, $pd-0, $pd-3);
+     border-radius: $border-radius-1;
+    &:hover{
+        @include hoverButton($color-blue-2, $color-blue-3, $color-blue-3);
+    }
+}

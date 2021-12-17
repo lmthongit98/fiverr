@@ -1,0 +1,39 @@
+.guides{
+    padding: 0 $pd-1 - 1;
+    margin-bottom: $mg-5;
+    .guides__title{
+        margin: 0;
+        padding-bottom: $pd-6;
+        padding-left: 0;
+        @include styleText($color-black-1, $fs-4, $fw-2);
+    }
+    a{
+        padding-bottom: $pd-6;
+        font-size: $fs-0 + 2;
+    }
+    .guides__item{
+        cursor: pointer;
+        figure{
+            position: relative;
+            .overlay{
+                opacity: 0;
+                position: absolute;
+                background-color: $color-white-0;
+                height: 100%;
+                width: 100%;
+                transition: all .2s;
+                &:hover{
+                    opacity: 0.1;
+                }
+            }
+        }
+        h5{
+            margin: 0;
+            padding-bottom: $pd-4;
+            @include styleText($color-black-1, $fs-0 + 2, $fw-2);
+        }
+        p{
+            @include styleText($color-gray-4, $fs-0, $fw-0);
+        }
+    }
+}

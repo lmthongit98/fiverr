@@ -1,0 +1,90 @@
+.views{
+    margin-bottom: $mg-5;
+    padding: 0 $pd-1 - 1;
+    h2{
+        @include styleText($color-black-1, $fs-4, $fw-1);
+        padding-bottom: $pd-6;
+    }
+    .card{
+        &:hover{
+            div.slider-nav.slick-initialized.slick-slider > i.fa.fa-angle-left.left.slick-arrow{
+                transform: translateX(0);
+            }
+            div.slider-nav.slick-initialized.slick-slider > i.fa.fa-angle-right.right.slick-arrow{
+                transform: translateX(0);
+            }
+        }
+        .card-body{
+            .card__avatar{
+                img{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                }
+                margin-right: 10px;
+            }
+            .card__info{
+                .card-title{
+                    margin: 0;
+                    @include styleText($color-black-0, $fs-0 - 1, $fw-0);
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+                .card-text{
+                    color: $color-gray-9;
+                    position: relative;
+                    .overlay{
+                        position: absolute;
+                        background-color: black;
+                        color: white;
+                        top: 0;
+                        left: 50%;      
+                    }
+                }
+            }
+        }
+        .card__desc{
+            padding: 0 18px;
+            p{
+                transition: all .3s;
+                @include styleText($color-black-3, $fs-0, $fw-0);
+            }
+        }
+        .card__star{
+            padding: 0 18px;
+            p{
+                color: $color-gray-9;
+                span{
+                   color: $color-yellow-0;
+                }
+                margin: 0;
+            }
+        }
+        .card__price{
+            margin-top: 10px;
+            border-top: 1px solid $color-gray-1;
+            padding: 10px 18px;
+            > i {
+                color: $color-gray-3;
+            }
+            p{
+                margin: 0;
+                @include styleText($color-gray-10, $fs-0 + 1, $fw-1);
+            }
+        }
+        &:hover{
+            .card__desc{
+                p{
+                    color: $color-green-1;
+                }
+            }
+        }
+    }
+    div.owl-nav > button.owl-prev > span{
+        left: -25px;
+    }
+    div.owl-nav > button.owl-next > span{
+        right: -25px;
+    }
+}

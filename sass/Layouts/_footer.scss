@@ -1,0 +1,106 @@
+footer{
+    padding: 0 15px;
+    padding-top: 64px;
+    border-top: 1px solid $color-gray-8;
+    .footer__top{
+        ul{
+            padding: 0;
+            list-style: none;
+            li:first-child{
+                @include styleText($color-black-1, $fs-0 + 1, $fw-2);
+            }
+            li:not(:last-child){
+                padding-bottom: 16px;
+            }
+            li{
+                a{
+                    text-decoration: none;
+                    @include styleText($color-gray-4, $fs-0 + 1, $fw-0);
+                    small{
+                        display: block;
+                        color: $color-gray-2;
+                    }
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    .footer__bottom{
+        padding-bottom: $pd-3;
+        .left{
+            margin-right: -15px;
+            border-top: 1px solid $color-gray-8;
+            padding-top: 24px;
+            p{
+                color: $color-gray-2;
+                font-size: $fs-0;
+            }
+        }
+        .right{
+            margin: 0;
+            padding: 0;
+            padding-top: 24px;
+            margin-left: -15px;
+            border-top: 1px solid $color-gray-8;
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            flex-wrap: wrap;
+            li{
+                margin: 0 10px;
+                a{
+                    height: 35px;
+                    width: 35px;
+                    border-radius: 50%;
+                    background-color: transparent;
+                    transition: all .3s;
+                    display: block;
+                    font-size: $fs-0 + 5;
+                    color: $color-gray-4;
+                    line-height: 35px;
+                    text-align: center;
+                    &:hover{
+                        background-color: $color-gray-8;
+                        text-decoration: none;
+                    }
+                    &.english, &.usd{
+                        font-size: $fs-0 - 1;
+                        width: 100px;
+                        height: 35px;
+                        border-radius: 20px;
+                    }    
+                }
+               
+            }
+        }
+        @include reponsive("medium"){
+            .right{
+                justify-content: center;
+                li{
+                    flex: 0 0 25%;
+                    a{
+                        text-align: center;
+                        margin: 0 auto;
+                    
+                    }
+                    margin: 0;
+                }
+            }
+        }
+        @media screen and (min-width: 768px) and (max-width: 1089px){
+            .right{
+                li{
+                    a{
+                        &.english, &.usd{
+                            display: none;
+                        }
+                    
+                    }
+                }
+            }
+        }
+    }
+}

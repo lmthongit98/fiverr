@@ -1,0 +1,72 @@
+.cover{
+    .carousel{
+        .carousel-item:nth-child(1){
+           background: url('../img/bg-hero-1-1792-x1.jfif') center center no-repeat;
+           background-size: cover;
+        }
+        .carousel-item:nth-child(2){
+            background: url('../img/bg-hero-2-1792-x1.jfif') center center no-repeat;
+            background-size: cover;
+         }
+         .carousel-item:nth-child(3){
+            background: url('../img/bg-hero-3-1792-x1.jfif') center center no-repeat;
+            background-size: cover;
+         }
+         .carousel-item:nth-child(4){
+            background: url('../img/bg-hero-4-1792-x1.jfif') center center no-repeat;
+            background-size: cover;
+         }
+        .carousel-item {
+            height: 700px;
+            position: relative;
+            img{
+                display: block;
+               
+            }
+            .carousel-caption--config{
+                position: absolute;
+                top: 50%;
+                left: 30px;
+                transform: translateY(-50%);
+                width: 50%;
+                h2{
+                    text-align: left;
+                    margin-bottom: $mg-2;
+                    @include styleText($color-white-0, $fs-2 + 5, $fw-1);
+                }
+                .form-inline{
+                    @include styleFormSearch($color-white-0, $color-gray-1, $color-gray-0, $color-white-0);
+                    .input-group{
+                        width: 100%;
+                        .form-control{
+                            padding: 25px;
+                            padding-left: 40px;
+                            &::placeholder{
+                                font-size: 17px;
+                            }
+                        }
+                        .input-group-append{
+                            .button--green{
+                                font-size: 16px;
+                                width: 100px;
+                            }
+                        }
+                        i{
+                            top: 20px;
+                            left: 13px;
+                        }
+                        
+                    }
+                    margin-bottom: $mg-2;
+                }
+                .carousel-caption__popular{
+                    text-align: left;
+                    span{
+                        font-weight: $fw-1;
+                        margin-right: $mg-0 + 5;
+                    }
+                }
+            }
+        }
+    }
+}

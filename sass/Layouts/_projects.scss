@@ -1,0 +1,63 @@
+.projects{
+    padding: $pd-7 $pd-1 - 1;
+    margin-bottom: $mg-5;
+    background-color: $color-gray-6;
+    .projects__title{
+        margin: 0;
+        padding-bottom: $pd-6;
+        padding-left: 0;
+        @include styleText($color-black-1, $fs-4, $fw-2);
+    }
+    a{
+        padding-bottom: $pd-6;
+        font-size: $fs-0 + 2;
+    }
+
+    .projects__carousel{
+        .item{
+            cursor: pointer;
+            .card-img-top{
+                height: 237px;
+                &:hover + .overlay{
+                    opacity: 1;
+                }
+            }
+            .overlay{
+                opacity: 0;
+                position: absolute;
+                background-color: $color-white-0;
+                width: 100%;
+                height: 237px;
+                transition: all .2s;
+                &:hover{
+                    opacity: 0.1;
+                }
+            }
+            .card-body{
+                .card__avatar{
+                    img{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                    }
+                    margin-right: $mg-6;
+                }
+                .card__info{
+                    .card-title{
+                        @include styleText($color-black-1, $fs-0, $fw-1);
+                        margin-bottom: 0;
+                    }
+                    .card-text{
+                        color: $color-gray-7;
+                    }
+                }
+            }
+        }
+    }
+    div.owl-nav > button.owl-prev > span{
+        left: -25px;
+    }
+    div.owl-nav > button.owl-next > span{
+        right: -25px;
+    }
+}

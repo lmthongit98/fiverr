@@ -1,0 +1,215 @@
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    .header__top{
+        .navbar{
+            padding: $pd-0 $pd-5;
+            transition: all .3s;
+            
+            .navbar__left{
+                flex-grow: 1;
+                .navbar-brand{
+                    color: $color-white-0;
+                    padding-bottom: $pd-0;
+                    margin-right: $mg-3;
+                    svg{
+                        g{
+                            &:first-child{
+                                path{
+                                    fill: $color-white-0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .form-inline{
+                    flex: 1;
+                    .input-group{  
+                        display: none;       
+                        width: 100%;
+                    }
+                    @include styleFormSearch($color-white-0, $color-gray-1, $color-gray-0, $color-white-0);
+                }
+            }
+            
+            .navbar-toggler{
+                margin-left: $mg-6;
+                span{
+                    color: $color-black-0;
+                }
+            }
+            
+            .navbar-collapse--config{
+                padding: $pd-0 + 5  $pd-5;
+                padding-right: 0;
+                .navbar-nav{
+                    .nav-item{
+                        .nav-link{
+                            padding: $pd-2 + 1 $pd-0;
+                            display: inline-block;
+                            @include styleText($color-white-0, $fs-0 + 1, $fw-1);
+                        }
+                        &:last-child{
+                            padding-right: 0;
+                            .nav-link{
+                                margin-top: $mg-0;
+                                margin-left: $mg-0 + 3;
+                                @include styleButton($color-white-0, transparent, $color-white-0, $fs-0 - 1, $fw-2, $pd-4 + 1, $pd-3);
+                                &:hover{
+                                    @include hoverButton($color-white-0, $color-green-0, $color-green-0);
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+
+
+
+        }
+
+        .navbar--scroll{
+            background-color: $color-white-0;
+            .navbar__left{
+                .navbar-brand{
+                    svg{
+                        g{
+                            &:first-child{
+                                path{
+                                    fill: $color-black-0;
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                .form-inline{
+                
+                    .input-group{  
+                        display: none;       
+                        display: flex;
+                    }
+                }
+            }
+
+            .navbar-collapse--config{
+                .navbar-nav{
+                    .nav-item{
+                        .nav-link{
+                            transition: all .3s;
+                            @include styleText($color-gray-3, $fs-0 + 1, $fw-1);
+                            &:hover{
+                                color: $color-green-0;
+                            }
+                        }
+                        &:last-child{
+                            .nav-link{
+                                @include styleButton($color-green-0, transparent, $color-green-0, $fs-0 - 1, $fw-2, $pd-4 + 1, $pd-3);
+                                &:hover{
+                                    @include hoverButton($color-white-0, $color-green-0, $color-green-0);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .header__bottom{
+        .navbar__bottom{
+            background-color: $color-white-0;
+            transition: all .3s;
+            visibility: hidden;
+            ul{
+                padding: 0 $pd-5 + 2;
+                display: flex;
+                list-style: none;
+                justify-content: space-between;
+                border: 1px solid $color-gray-1;
+                border-left: 0;
+                border-right: 0;
+                li{
+                    a{
+                        @include styleText($color-gray-4, $fs-0, $fw-0);
+                        display: block;
+                        padding: $pd-0 0;
+                        text-decoration: none;
+                        position: relative;
+                        &::after{
+                            content: "";
+                            display: block;
+                            height: 3px;
+                            width: 100%;
+                            position: absolute;
+                            background-color: $color-green-1;
+                            left: 0;
+                            bottom: -1px;
+                            visibility: hidden;
+                        }
+                        &:hover{
+                            &::after{
+                                visibility: visible;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .navbar--scroll{
+            visibility: visible;
+        }
+    }
+
+    //reponsive
+    @include reponsive("screen-0"){
+        .header__top{
+            .navbar{
+                .navbar-collapse--config{
+                    .navbar-nav{
+                        .nav-item{
+                            .nav-link{
+                                font-size: $fs-0 - 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    @include reponsive("larger"){
+        .header__top{
+            .navbar{
+                .navbar__left{
+                    .form-inline{
+                        .input-group{
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+    @media screen and (min-width: 992px) and (max-width: 1164px){
+        .header__top{
+            .navbar{
+                .navbar-collapse--config{
+                    .navbar-nav{
+                        .nav-item--config{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,50 @@
+.services{
+    margin-bottom: $mg-4;
+    padding: 0 $pd-5;
+    h2{
+        @include styleText($color-black-1, $fs-4, $fw-1);
+        padding-bottom: $pd-6;
+    }
+    .owl-carousel--config{
+        .item{
+            cursor: pointer;;
+            position: relative;
+            .overlay{
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background-color: $color-white-0;
+                transition: all .3s;
+                &:hover{
+                    opacity: 0.2;
+                }
+            }
+            .item__info{
+                z-index: 999;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                p{
+                    margin: 0px $mg-2;
+                    margin-top: $mg-6;
+                    @include styleText($color-white-0, $fs-0, $fw-0);
+                }
+                h3{
+                    @include styleText($color-white-0, $fs-3 - 1, $fw-1);
+                    margin: $mg-2;
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+    div.owl-nav > button.owl-prev > span{
+        left: -25px;
+    }
+    div.owl-nav > button.owl-next > span{
+        right: -25px;
+    }
+}
